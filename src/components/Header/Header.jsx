@@ -26,7 +26,7 @@ function Header() {
     }
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <h2 className={styles.logo}>Rosana Celine</h2>
             <nav className={styles.navBar}>
                 <ul className={hamburguerOpen ? styles.menuOpen : styles.menu}>
@@ -40,7 +40,7 @@ function Header() {
                     <Hamburguer isOpen={hamburguerOpen}/>
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
 

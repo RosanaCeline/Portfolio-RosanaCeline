@@ -1,14 +1,22 @@
 .header {
     height: var(--header-height);  
+    min-height: auto;
     width: 100%;
     max-width: var(--max-width);
-    margin-inline: auto;
+    
+    position: relative; /* Ou sticky, o importante é ter uma posição */
+    z-index: 9999;
+    overflow-x: hidden;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    font-family: var(--font-main)
+    font-family: var(--font-main);
+
+    margin-inline: auto;
+    padding-left: clamp(1.5rem, 4vw, 10.5rem); 
+    padding-right: clamp(1.5rem, 4vw, 10.5rem);
 }
 
 .navBar {
@@ -25,9 +33,11 @@
 .navBar .menuOpen {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: var(--header-height);
     left: 0;
+    width: 100%;
+    z-index: 10000;
 
     gap: 3rem;
     padding-top: 2rem;
@@ -35,12 +45,12 @@
     padding-left: clamp(1.5rem, 8vw, 10.5rem); 
     padding-right: clamp(1.5rem, 8vw, 10.5rem); 
     background-color: var(--violet-dark);
-    width: 100%;
 }
 
 .navBar ul li {
     cursor: pointer;
     list-style: none;
+    font-weight: 600;
 }
 
 .navBar ul li:hover {
@@ -50,7 +60,7 @@
 
 .navBar a {
     text-decoration: none;
-    color: var(--white)
+    color: var(--white);
 }
 
 /* tablet */

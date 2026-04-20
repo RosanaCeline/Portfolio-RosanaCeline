@@ -1,0 +1,14 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    white-space: nowrap;
+
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
