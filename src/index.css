@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+  --violet-dark: #2A2344;
+  --pink-dark: #80043A;
+  --purple-dark: #260729;
+  --cyan: #02907D;
+  --white: #FFFFFF;
+  --text: #FFFFFF;
+  --selection-color: #422343;
+
+  --font-main: 'Montserrat', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+
+  --header-height: 75px;
+  --max-width: 1500px;
+  --div-border: 1.5rem;
+
+  color: var(--text);
+  width: 100vw;
+  padding-left: clamp(1.5rem, 8vw, 10.5rem); 
+  padding-right: clamp(1.5rem, 8vw, 10.5rem); 
+
+  --text-xs: clamp(0.7rem, 0.6rem + 0.15vw, 0.8rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+  --text-md: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  --text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--violet-dark);
+}
+
+h1 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 5%;
+}
+
+::selection {
+  background: var(--selection-color);
+  color: var(--white);
+}
+
+::-moz-selection {
+  background: var(--selection-color);
+  color: var(--white);
+}

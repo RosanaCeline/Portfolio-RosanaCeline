@@ -1,0 +1,90 @@
+.header {
+    height: var(--header-height);  
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: var(--font-main)
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+}
+
+.navBar .menu {
+    display: none;
+    list-style: none;
+    font-size: var(--text-md);
+}
+
+.navBar .menuOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+
+    gap: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: clamp(1.5rem, 8vw, 10.5rem); 
+    padding-right: clamp(1.5rem, 8vw, 10.5rem); 
+    background-color: var(--violet-dark);
+    width: 100%;
+}
+
+.navBar ul li {
+    cursor: pointer;
+    list-style: none;
+}
+
+.navBar ul li:hover {
+    text-shadow: 0px 0px 6px var(--white);
+    transition: text-shadow 0.2s ease;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: var(--white)
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* laptop */
+@media screen and (min-width: 1024px) {
+    .navBar {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .navBar .hamburguer {
+        display: none;
+    }
+
+    .navBar .menu {
+        display: flex; 
+        width: auto;
+        flex-direction: row;
+    }
+
+    .navBar .menuOpen {
+        flex-direction: row;
+        position: static;
+        left: none;
+        padding: 0;
+        background: none;
+        height: auto;
+    }
+}
+
+/* desktop grande */
+@media screen and (min-width: 1280px) {
+}

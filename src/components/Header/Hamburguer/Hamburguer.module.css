@@ -1,0 +1,29 @@
+.hamburguerIcon {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+}
+
+.burguer {
+    width: 2rem;
+    height: 0.2rem;
+    border-radius: 10px;
+    background-color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+
+.open div:nth-child(1) {
+    opacity: 0;
+}
+
+/* Barra do meio: desaparece (opacidade 0) */
+.open div:nth-child(2) {
+    transform: translateY(5.5px) rotate(-135deg);
+}
+
+/* Barra de baixo: gira -45 graus e sobe */
+.open div:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+}
