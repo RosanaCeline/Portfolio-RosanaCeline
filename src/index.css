@@ -3,11 +3,14 @@
 :root {
   --violet-dark: #2A2344;
   --pink-dark: #80043A;
-  --pink-light: #FEBEDA;
+  --pink-light: #fc9cc5;
   --purple-dark: #260729;
-  --cyan: #02907D;
+  --purple-light: #43204A;
+  --cyan-dark: #02907D;
+  --cyan-light: #89ffef;
   --white: #FFFFFF;
   --white-fade:#f8f8f2;
+  --black: #000000;
   --text: #FFFFFF;
   --selection-color: #422343;
 
@@ -36,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {

@@ -13,10 +13,10 @@ function Home() {
                         Transformo <span className={styles.title1}>ideias</span> em <span className={styles.title2}>soluções</span> digitais reais
                     </h1>
                     <p>
-                        Sou desenvolvedora <b>full-stack</b>, focada em <b>desenvolvimento web</b>.
+                        Sou desenvolvedora <strong>full-stack</strong>, focada em <strong>desenvolvimento web</strong>.
                     </p>
                     <p>
-                        Desenvolvo projetos completos, desde a <b>prototipação</b> até a <b>hospedagem</b> de sites. 
+                        Desenvolvo projetos completos, desde a <strong>prototipação</strong> até a <strong>hospedagem</strong> de sites. 
                     </p>
 
                     <div className={styles.tags}>

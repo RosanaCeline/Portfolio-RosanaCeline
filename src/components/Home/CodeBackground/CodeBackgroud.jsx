@@ -1,46 +1,77 @@
-import styles from './CodeBackground.module.css'
+import React from 'react';
+import { motion } from 'framer-motion';
+import styles from './CodeBackground.module.css';
 
-function CodeBackground() {
+const codeSnippets = [
+    "public static void main(String[] args) { System.out.println('Hello World'); }",
+    "@RestController @RequestMapping('/api/v1') public class PortfolioController",
+    "List<String> skills = Arrays.asList('Java', 'Spring', 'React');",
+    "Optional<User> user = userRepository.findById(id);",
+    "public interface UserRepository extends JpaRepository<User, Long> {}",
+    "ResponseEntity.ok().body(service.findAll());",
+    "def get_context_data(self, **kwargs): return super().get_context_data(**kwargs)",
+    "@login_required def profile(request): return render(request, 'profile.html')",
+    "print(f'User authenticated: {user.is_authenticated}')",
+    "import pandas as pd | df = pd.read_csv('data.csv')",
+    "<section className='container'> <h1>Rosana Celine</h1> </section>",
+    "const [hamburguerOpen, setHamburguerOpen] = useState(false);",
+    "git commit -m 'feat: added animated code background'",
+    "npm install @rosana-celine/portfolio --save-dev",
+    "docker compose up --build -d database",
+    "grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));",
+    "@Autowired private ProductService productService;",
+    "export default function App() { return <Header /> }",
+    "box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px);",
+    "fetch('https://api.github.com/users/rosanaceline')",
+    "git push origin main --force-with-lease",
+    "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+];
+
+const CodeBackground = () => {
+    const Motion = motion;
     return (
-        <>
         <div className={styles.codeBackground}>
-            {/* JAVA */}
-            <div className={styles.codeLine}>public static void main(String[] args) {'{'} System.out.println("Hello World"); {'}'}</div>
-            <div className={styles.codeLine}>@RestController @RequestMapping("/api/v1") public class PortfolioController</div>
-            <div className={styles.codeLine}>List&lt;String&gt; skills = Arrays.asList("Java", "Spring", "React");</div>
-            <div className={styles.codeLine}>Optional&lt;User&gt; user = userRepository.findById(id);</div>
-            <div className={styles.codeLine}>public interface UserRepository extends JpaRepository&lt;User, Long&gt; {'{}'}</div>
-            <div className={styles.codeLine}>ResponseEntity.ok().body(service.findAll());</div>
+        <Motion.div
+            className={styles.aurora}
+            animate={{
+            x: [-30, 30, -30],
+            y: [0, -40, 0],
+            }}
+            transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+            }}
+        />
 
-            {/* PYTHON */}
-            <div className={styles.codeLine}>def get_context_data(self, **kwargs): return super().get_context_data(**kwargs)</div>
-            <div className={styles.codeLine}>@login_required def profile(request): return render(request, 'profile.html')</div>
-            <div className={styles.codeLine}>print(f"User authenticated: {'{user.is_authenticated}'}")</div>
-            <div className={styles.codeLine}>import pandas as pd | df = pd.read_csv('data.csv')</div>
-
-            {/* HTML / REACT */}
-            <div className={styles.codeLine}>&lt;section className="container"&gt; &lt;h1&gt;Rosana Celine&lt;/h1&gt; &lt;/section&gt;</div>
-            <div className={styles.codeLine}>&lt;input type="email" placeholder="celinerosana@gmail.com.com" required /&gt;</div>
-            <div className={styles.codeLine}>const [hamburguerOpen, setHamburguerOpen] = useState(false);</div>
+        {codeSnippets.map((snippet, index) => {
+            const isEven = index % 2 === 0;
+            const duration = 15 + (index % 10);
             
-            {/* OUTRAS TECHS */}
-            <div className={styles.codeLine}>git commit -m "feat: added animated code background"</div>
-            <div className={styles.codeLine}>npm install @rosana-celine/portfolio --save-dev</div>
-            <div className={styles.codeLine}>docker compose up --build -d database</div>
-            <div className={styles.codeLine}>grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));</div>
-            
-            {/* REPETIÇÃO PARA MAIOR DENSIDADE (OPCIONAL) */}
-            <div className={styles.codeLine}>@Autowired private ProductService productService;</div>
-            <div className={styles.codeLine}>export default function App() {'{'} return &lt;Header /&gt; {'}'}</div>
-
-            {/* WEB & TOOLS */}
-            <div className={styles.codeLine}>box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px);</div>
-            <div className={styles.codeLine}>fetch('https://api.github.com/users/rosanaceline')</div>
-            <div className={styles.codeLine}>git push origin main --force-with-lease</div>
-            <div className={styles.codeLine}>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</div>
+            return (
+            <Motion.div
+                key={index}
+                className={styles.codeLine}
+                initial={{ x: isEven ? "-100%" : "100%" }}
+                animate={{ x: isEven ? "100%" : "-100%" }}
+                transition={{
+                duration: duration,
+                repeat: Infinity,
+                ease: "linear",
+                delay: -(index * 1.5),
+                }}
+                style={{
+                opacity: index < 8 ? 0.08 : index < 16 ? 0.12 : 0.18,
+                fontSize: `${1 + (index % 3) * 0.1}rem`,
+                color: `var(--color-code-${(index % 5) + 1})`
+                }}
+            >
+                {snippet}
+            </Motion.div>
+            );
+        })}
         </div>
-        </>
-    )
-}
+    );
+};
 
 export default CodeBackground;

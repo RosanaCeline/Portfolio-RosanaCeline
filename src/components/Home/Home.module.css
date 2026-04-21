@@ -48,7 +48,7 @@
 }
 
 .title2 {
-    background: linear-gradient(to right, var(--cyan), var(--white));
+    background: linear-gradient(to right, var(--cyan-dark), var(--cyan-light));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
