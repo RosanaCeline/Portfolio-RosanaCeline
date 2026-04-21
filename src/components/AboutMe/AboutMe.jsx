@@ -1,5 +1,7 @@
+import { useMemo } from 'react';
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import { ClockCheck, CodeXml, SmilePlus } from 'lucide-react';
+import throttle from 'lodash/throttle';
 import Card from '../Card/Card'
 import styles from './AboutMe.module.css'
 
@@ -14,12 +16,17 @@ function AboutMe() {
     const pinkX = useSpring(mouseX, { stiffness: 60, damping: 20 });
     const pinkY = useSpring(mouseY, { stiffness: 60, damping: 20 });
 
+    const throttledMouseMove = useMemo(
+        () => throttle((clientX, clientY, currentTarget) => {
+            const { left, top } = currentTarget.getBoundingClientRect();
+            mouseX.set(clientX - left);
+            mouseY.set(clientY - top);
+        }, 100),
+        [mouseX, mouseY]
+    );
+
     const handleMouseMove = (e) => {
-        const { currentTarget, clientX, clientY } = e;
-        const { left, top } = currentTarget.getBoundingClientRect();
-        
-        mouseX.set(clientX - left);
-        mouseY.set(clientY - top);
+        throttledMouseMove(e.clientX, e.clientY, e.currentTarget);
     };
 
     return (
