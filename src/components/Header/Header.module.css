@@ -51,6 +51,7 @@
     cursor: pointer;
     list-style: none;
     font-weight: 600;
+    letter-spacing: 3%;
 }
 
 .navBar ul li:hover {

@@ -1,0 +1,55 @@
+.footer {
+    height: var(--footer-height);
+    background: var(--purple-dark);
+    letter-spacing: 3%;
+
+    font-size: var(--text-sm);
+}
+
+.footerContent {
+    width: 100%;
+    max-width: var(--max-width);
+    
+    margin-inline: auto;
+    padding-left: clamp(1.5rem, 4vw, 10.5rem); 
+    padding-right: clamp(1.5rem, 4vw, 10.5rem);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toTop {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.toTop:hover svg {
+    filter: drop-shadow(0px 0px 2px var(--white));
+    transition: filter 0.2s ease;
+}
+
+.toTop:hover {
+    text-shadow: 0px 0px 6px var(--white);
+    transition: text-shadow 0.2s ease;
+    transform: translateY(-5px);
+}
+
+.footer span,
+.toTop {
+    max-height: 28px;
+    gap: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.toTop span {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .toTop span {
+        display: flex;
+    }
+}
