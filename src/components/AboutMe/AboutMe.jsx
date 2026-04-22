@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { motion, useSpring, useMotionValue } from "framer-motion";
-import { ClockCheck, CodeXml, SmilePlus } from 'lucide-react';
+import { Users, SearchCode, SmilePlus } from 'lucide-react';
 import throttle from 'lodash/throttle';
 import Card from '../Card/Card'
 import styles from './AboutMe.module.css'
@@ -59,27 +59,29 @@ function AboutMe() {
 
                 <div className={styles.aboutMeContainer}>
                     <div className={styles.aboutMeContent}>
-                        <p>
-                            Estudante de Ciência da Computação e Técnica em Informática, atuando em projetos desde 2024. 
-                            Desenvolvo <strong>soluções de alta perfomance</strong> e <strong>interatividade</strong>, priorizando uma <strong>experiência de usuário intuitiva</strong> e <strong>satisfatória</strong>.
-                        </p>
-                        <p>
-                            Meus sites são codificados manualmente, utilizando principalmente <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> 
-                            com <strong>React</strong>, <strong>Java 21</strong> com <strong>Spring Framework</strong> e <strong>PostgreSQL</strong>.
-                        </p>
-                        <p>
-                            Possuo experiência em diferentes etapas do desenvolvimento de software, atuando desde a <strong>elaboração de requisitos</strong> 
-                            e <strong>prototipação de interfaces no Figma</strong> até o <strong>desenvolvimento</strong> e <strong>implantação</strong>.
-                            Também trabalhei com <strong>testes de aceitação</strong>, utilizando <strong>Robot Framework</strong> para garantir a qualidade das aplicações.
-                        </p>
-                        
+                        <div>
+                            <p>
+                                Estudante de Ciência da Computação e Técnica em Informática, atuando em projetos desde 2024. 
+                                Desenvolvo <strong>soluções de alta perfomance</strong> e <strong>interatividade</strong>, priorizando uma <strong>experiência de usuário intuitiva</strong> e <strong>satisfatória</strong>.
+                            </p>
+                            <p>
+                                Meus sites são codificados manualmente, utilizando principalmente <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> 
+                                com <strong>React</strong>, <strong>Java 21</strong> com <strong>Spring Framework</strong> e <strong>PostgreSQL</strong>.
+                            </p>
+                            <p>
+                                Possuo experiência em diferentes etapas do desenvolvimento de software, atuando desde a <strong>elaboração de requisitos</strong> 
+                                e <strong>prototipação de interfaces no Figma</strong> até o <strong>desenvolvimento</strong> e <strong>implantação</strong>.
+                                Também trabalhei com <strong>testes de aceitação</strong>, utilizando <strong>Robot Framework</strong> para garantir a qualidade das aplicações.
+                            </p>
+                        </div>
                         <a href="curriculo.pdf" download="Currículo - Rosana Celine.pdf">
                             <button className={styles.button}>{'Currículo (PDF)'}</button>
                         </a>
                     </div>
                     <div className={styles.cards}>
-                        <Card icon={CodeXml} title='+2 anos' subtitle='programando'/>
-                        <Card icon={ClockCheck} title='Adaptabilidade' subtitle='em ambientes ágeis'/>
+                        <Card icon={Users} title='Comunicação Técnica' subtitle='Facilidade em traduzir requisitos de negócio em documentação e protótipos'/>
+                        <Card icon={SearchCode} title='Resolução de Problemas' subtitle='Foco em encontrar soluções eficientes para bugs complexos e gargalos de performance'/>
+                        <Card icon={SearchCode} title='Aprendizado Ágil' subtitle='Capacidade de absorver novas stacks e metodologias rapidamente'/>
                     </div>
                 </div>
             </div>

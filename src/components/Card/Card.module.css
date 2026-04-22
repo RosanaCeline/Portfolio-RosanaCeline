@@ -2,31 +2,46 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 7rem;
+    padding: 1.5rem 2rem;
 
-    background-color: var(--purple-light);
-    border-radius: var(--border-radius);
+    background: transparent;
+    border-left: 4px solid var(--purple-light); 
+    border-radius: 4px;
+    text-align: start;
 }
 
-.icon {
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyan-light); /* Brilha quando passa o mouse */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card svg {
     color: var(--white);
+    height: 2.5rem !important; 
+    width: 2.5rem !important;
+    
+    display: block; 
+    margin-bottom: 1rem;
+    align-self: flex-start;
 }
 
 .title {
+    color: var(--white);
     font-size: var(--text-md);
-    font-weight: 600;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
+    opacity: 0.9;
     font-weight: 400;
 }
 
 @media screen and (min-width: 1024px) {
-
     .card {
-        max-width: 450px;
+        padding: 2rem 2rem;
     }
 }
