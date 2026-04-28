@@ -30,7 +30,7 @@ function AboutMe() {
     };
 
     return (
-        <section className={styles.aboutMe} onMouseMove={handleMouseMove}>
+        <section id="sobre-mim" className={styles.aboutMe} onMouseMove={handleMouseMove}>
             <Motion.div 
                 className={`${styles.light} ${styles.cyanLight}`}
                 style={{ 

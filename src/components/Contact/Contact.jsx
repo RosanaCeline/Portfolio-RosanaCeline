@@ -4,7 +4,7 @@ import styles from './Contact.module.css';
 
 function Contact() {
     return (
-        <section className={styles.contact}>
+        <section id="contato" className={styles.contact}>
             <div className={styles.contactSection}>
                 <h1 className={styles.title}>{'<Contato/>'}</h1>
                 <div className={styles.contactContent}>

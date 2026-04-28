@@ -5,7 +5,7 @@ import styles from './Home.module.css'
 
 function Home() {
     return (
-        <section className={styles.home}>
+        <section id="inicio" className={styles.home}>
             <CodeBackground/>
             <div className={styles.homeContainer}>
                 <div className={styles.homeContent}>

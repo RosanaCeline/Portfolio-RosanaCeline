@@ -53,7 +53,7 @@ function Projects() {
 
     const refs = [useRef(null), useRef(null), useRef(null), useRef(null)]; 
     return (
-        <section className={styles.projects}>
+        <section id="projetos" className={styles.projects}>
             <div className={styles.projectsSection}>
                 <h1 className={styles.title}>{'<Projetos/>'}</h1>
                 <div className={styles.cards}>
