@@ -22,26 +22,14 @@ function Header() {
     }, []);
 
     useEffect(() => {
-        let startY = 0;
-
-        const handleTouchStart = (e) => {
-            startY = e.touches[0].clientY;
-        };
-
-        const handleTouchMove = (e) => {
-            const deltaY = Math.abs(e.touches[0].clientY - startY);
-            if (deltaY > 10 && window.innerWidth <= 1024) {
+        const handleScroll = () => {
+            if (window.innerWidth <= 1024) {
                 setHamburguerOpen(false);
             }
         };
 
-        window.addEventListener('touchstart', handleTouchStart);
-        window.addEventListener('touchmove', handleTouchMove);
-        
-        return () => {
-            window.removeEventListener('touchstart', handleTouchStart);
-            window.removeEventListener('touchmove', handleTouchMove);
-        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const toggleHamburguer = () => {
