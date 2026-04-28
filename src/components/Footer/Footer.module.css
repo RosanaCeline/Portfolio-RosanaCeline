@@ -4,6 +4,7 @@
     letter-spacing: 3%;
 
     font-size: var(--text-sm);
+    font-family: var(--font-main);
 }
 
 .footerContent {

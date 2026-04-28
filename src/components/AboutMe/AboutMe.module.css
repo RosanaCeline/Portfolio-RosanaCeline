@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .aboutMeSection .title {
@@ -62,7 +63,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 1.5rem;
 }
 
@@ -77,6 +78,7 @@
     border-radius: var(--border-radius);
     padding: 1rem 2rem;
     color: var(--white);
+    font-family: var(--font-main);
     font-size: var(--text-md);
     font-weight: 600;
     width: 100%;
@@ -159,19 +161,16 @@
         "content cards";
     }
 
-    .aboutMeSection .button {
-        max-width: 35rem;
-    }
-
     .aboutMeContainer {
         flex-direction: row;
         gap: 8rem;
         justify-content: space-between;
+        max-height: 40rem;
     }
 
     .aboutMeSection .cards {
         align-items: end;
         gap: 0px;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }

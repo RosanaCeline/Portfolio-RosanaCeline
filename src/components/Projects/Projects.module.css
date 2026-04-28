@@ -1,0 +1,38 @@
+.projects {
+    width: 100%;
+    display: flex;
+    font-family: var(--font-main);
+    padding: 2rem 0;
+}
+
+.projectsSection {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    margin-bottom: 2rem;
+
+    padding-left: clamp(1.5rem, 4vw, 10.5rem); 
+    padding-right: clamp(1.5rem, 4vw, 10.5rem);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projectsSection .title {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .projects {
+        min-height: 100vh;
+    }
+}

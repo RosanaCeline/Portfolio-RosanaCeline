@@ -80,7 +80,7 @@ function AboutMe() {
                     </div>
                     <div className={styles.cards}>
                         <Card icon={Users} title='Comunicação Técnica' subtitle='Facilidade em traduzir requisitos de negócio em documentação e protótipos'/>
-                        <Card icon={SearchCode} title='Resolução de Problemas' subtitle='Foco em encontrar soluções eficientes para bugs complexos e gargalos de performance'/>
+                        <Card icon={SearchCode} title='Resolução de Problemas' subtitle='Foco em encontrar soluções eficientes para bugs complexos'/>
                         <Card icon={SearchCode} title='Aprendizado Ágil' subtitle='Capacidade de absorver novas stacks e metodologias rapidamente'/>
                     </div>
                 </div>

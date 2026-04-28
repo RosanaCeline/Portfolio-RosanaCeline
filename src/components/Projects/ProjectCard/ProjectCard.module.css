@@ -1,0 +1,139 @@
+.cardWrapper {
+    position: sticky;
+    top: 2rem;
+    width: 100%;
+    height: calc(70svh + 8rem);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cardWrapper:last-child {
+    height: auto;
+}
+
+.card {
+    width: 100%;
+    max-height: 80svh;
+    background: var(--purple-dark);
+    font-family: var(--font-main);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card h2 {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+}
+
+.content {
+    width: 100%;
+    padding: 2rem 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 3rem;
+}
+
+.content .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.description {
+    font-size: var(--text-md);
+}
+
+.button {
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    color: var(--purple-dark);
+    background: var(--white);
+    outline: none;
+    border: none;
+    border-radius: calc(var(--border-radius) * 2);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 6px var(--white);
+    transition: box-shadow 0.2s ease;
+}
+
+.toScreenshots {
+    font-size: var(--text-xs);
+    cursor: pointer;
+    letter-spacing: 3%;
+}
+
+.toScreenshots:hover {
+    text-shadow: 0px 0px 6px var(--white);
+    transition: text-shadow 0.2s ease;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    object-fit: cover;
+    object-position: bottom;
+}
+
+@media screen and (min-width: 768px) {
+    .cardWrapper {
+        height: 50svh;
+    }
+    .card {
+        flex-direction: row;
+        max-height: none;
+    }
+
+    .content {
+        width: 100%;     
+        flex: 1;
+    }
+
+    .photo img {
+        border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cardWrapper {
+        height: 70svh;
+    }
+
+    .content {
+        padding: 4rem 4rem;
+    }
+
+    .content .bottom {
+        gap: 1rem;
+    }
+
+    .card h2 {
+        font-size: calc(var(--text-md) * 1.2);
+    }
+
+    .description {
+        font-size: var(--text-lg);
+        line-height: 2.5rem;
+    }
+}
