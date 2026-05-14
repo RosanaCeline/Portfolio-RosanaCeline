@@ -2,7 +2,7 @@
     position: sticky;
     top: 2rem;
     width: 100%;
-    height: calc(70svh + 8rem);
+    min-height: calc(70svh + 8rem);
     display: flex;
     align-items: flex-start;
     justify-content: center;
