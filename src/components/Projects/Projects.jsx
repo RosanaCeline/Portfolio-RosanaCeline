@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import ProjectCard from './ProjectCard/ProjectCard'
 import ProjectModal from './ProjectModal/ProjectModal';
+import CoracaoValentePhoto from '../../assets/coracaovalente-screenshot.webp'
 import HerTechPhoto from '../../assets/hertech-screenshot.webp'
 import BoamentePhoto from '../../assets/boamente-screenshot.webp'
 import NossoContarPhoto from '../../assets/nossocontar-screenshot.webp'
@@ -10,11 +11,19 @@ import styles from './Projects.module.css'
 function Projects() {
     const projetos = [
         {
+            name: 'ONG Coração Valente',
+            description: 'Site para a ONG Coração Valente. Construído usando React, Spring Boot.',
+            photo: CoracaoValentePhoto,
+            link: 'https://coracaovalente.ifce.edu.br/',
+            status: 'Concluído',
+            screenshots: [] // Aqui você passa o array de fotos depois
+        },
+        {
             name: 'Her Tech Rise',
             description: 'Rede social profissional para mulheres na tecnologia. Construído usando React, Tailwind, Spring Boot.',
             photo: HerTechPhoto,
             link: 'https://cynthiapinheiro.ifce.edu.br/hertechrise/',
-            status: 'Em desenvolvimento',
+            status: 'Concluído',
             screenshots: [] // Aqui você passa o array de fotos depois
         },
         {
@@ -32,22 +41,7 @@ function Projects() {
             link: 'https://boamente-frontend.vercel.app/',
             status: 'Concluído',
             screenshots: []
-        },
-        {
-            name: 'Modella Clothing Store',
-            description: 'Interface para loja de roupas femininas. Criado para estudo e feito usando JavaScript e React.',
-            photo: ModellaPhoto,
-            link: 'https://clothing-store-delta-rust.vercel.app/',
-            status: 'Estudo',
-            screenshots: []
         }
-        /*<ProjectCard
-            name='ONG Coração Valente'
-            description=''
-            photo=''
-            link='Link para prototipo'
-            screenshots='{}'
-        />*/
         /*<div>Caso de estudo - robot framework da kabum</div>*/
     ];
 
