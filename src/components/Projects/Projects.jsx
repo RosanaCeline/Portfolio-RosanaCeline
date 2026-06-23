@@ -5,7 +5,6 @@ import CoracaoValentePhoto from '../../assets/coracaovalente-screenshot.webp'
 import HerTechPhoto from '../../assets/hertech-screenshot.webp'
 import BoamentePhoto from '../../assets/boamente-screenshot.webp'
 import NossoContarPhoto from '../../assets/nossocontar-screenshot.webp'
-import ModellaPhoto from '../../assets/modella-screenshot.webp'
 import styles from './Projects.module.css'
 
 function Projects() {
